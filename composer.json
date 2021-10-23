@@ -1,0 +1,20 @@
+{
+    "name": "etudiant/wordpress",
+    "authors": [{
+        "name": "JeanFrangeul",
+        "email": "frangeuljean@gmail.com"
+    }],
+    "extra": {
+        "wordpress-install-dir": "wp"
+    },
+    "repositories": [{
+        "type": "composer",
+        "url": "https://wpackagist.org",
+        "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    }],
+    "require": {
+        "johnpbloch/wordpress": "^5.7",
+        "wpackagist-plugin/fakerpress": "^0.5.1",
+        "wpackagist-plugin/query-monitor": "^3.6"
+    }
+}

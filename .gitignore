@@ -1,0 +1,7 @@
+#on gitignore le dossier wp A LA RACINE (avec le préfixe "/")
+/wp
+/wp-config.php
+/wp-content
+#on gitignore tous les vendors
+vendor 
+node_modules
