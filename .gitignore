@@ -5,3 +5,14 @@
 #on gitignore tous les vendors
 vendor 
 node_modules
+
+
+
+/wp-content/*
+# 2. on "désignore" le répertoire lui-même
+!/wp-content
+
+# 3 & 4 : idem pour le répertoire themes
+/wp-content/themes/*
+!/wp-content/themes
+!/wp-content/themes/maison-georgette

@@ -1,0 +1,29 @@
+header {
+    width: 100vw;
+    padding: 10px;
+    border-bottom: solid 1px gray;
+
+    .desktop-display {
+        max-height: 500px;
+
+        .main-menu {
+            text-align: center;
+            list-style: none;
+
+            a {
+                color: burlywood;
+                font-size: 30px;
+
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+
+        #header-logo {
+            object-fit: contain;
+            width: 100%;
+            max-height: 300px;
+        }
+    }
+}
