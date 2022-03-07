@@ -16,6 +16,7 @@ body {
     }
 
     main {
+        margin-top: 50px;
         margin-left: 100px;
         margin-right: 100px;
 
@@ -23,38 +24,80 @@ body {
             //padding: 0 100px;
 
             .title {
-                font-size: 2.5rem;
-                align-items: center;
+                font-size: 5rem;
+                text-align: center;
             }
 
             &.top {
                 #title {
-                    font-size: 3.5rem;
+                    font-size: 7rem;
                 }
                 h4 {
-                    font-size: 1.5rem;
+                    font-size: 2rem;
+                    margin-bottom: 20px;
                 }
                 video {
-
                     object-fit: fill;
                 }
             }
 
             &.categories {
-                .cat-title {
+                .categorie {
+                    padding: 30px 0;
 
-                }
-
-                .home-slider {
-
-                    .item {
-                        max-height: 100%;
-                        margin: 0 10px;
-
+                    .cat-title {
+                        font-size: 3rem;
+                        margin-bottom: 20px;
                     }
+
+                    .home-slider {
+
+                        .item {
+                            max-height: 100%;
+                            margin: 0 10px;
+                        }
+                    }                    
                 }
             }
 
+            &.about {
+                margin-top: 50px;
+                margin-bottom: 60px;
+                h2 {
+                    margin-bottom: 35px;
+                }
+                p {
+                    font-size: 1.3rem;
+                    text-align: justify;
+                }
+            }
+
+            &.map {
+
+                h2 {
+                    margin-bottom: 35px;
+                }
+
+                iframe {
+                    box-shadow: 1px -1px 11px 0px rgba(0,0,0,0.5);
+                    -webkit-box-shadow: 1px -1px 11px 0px rgba(0,0,0,0.5);
+                    -moz-box-shadow: 1px -1px 11px 0px rgba(0,0,0,0.5);
+                }
+
+                .contact {
+                    padding: 40px 30px;
+                    .social {
+
+                        a {
+                            color: black;
+                            text-decoration: none;
+                            svg {
+                                transform: scale(2.5)
+                            }
+                        }
+                    }
+                }
+            }
         } 
     }
 }

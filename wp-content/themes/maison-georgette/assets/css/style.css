@@ -8627,25 +8627,63 @@ body {
   }
 }
 body main {
+  margin-top: 50px;
   margin-left: 100px;
   margin-right: 100px;
 }
 body main section .title {
-  font-size: 2.5rem;
-  align-items: center;
+  font-size: 5rem;
+  text-align: center;
 }
 body main section.top #title {
-  font-size: 3.5rem;
+  font-size: 7rem;
 }
 body main section.top h4 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 body main section.top video {
   object-fit: fill;
 }
-body main section.categories .home-slider .item {
+body main section.categories .categorie {
+  padding: 30px 0;
+}
+body main section.categories .categorie .cat-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+body main section.categories .categorie .home-slider .item {
   max-height: 100%;
   margin: 0 10px;
+}
+body main section.about {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+body main section.about h2 {
+  margin-bottom: 35px;
+}
+body main section.about p {
+  font-size: 1.3rem;
+  text-align: justify;
+}
+body main section.map h2 {
+  margin-bottom: 35px;
+}
+body main section.map iframe {
+  box-shadow: 1px -1px 11px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 1px -1px 11px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px -1px 11px 0px rgba(0, 0, 0, 0.5);
+}
+body main section.map .contact {
+  padding: 40px 30px;
+}
+body main section.map .contact .social a {
+  color: black;
+  text-decoration: none;
+}
+body main section.map .contact .social a svg {
+  transform: scale(2.5);
 }
 
 body.archive {
