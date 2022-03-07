@@ -15,6 +15,7 @@
     "require": {
         "johnpbloch/wordpress": "^5.7",
         "wpackagist-plugin/fakerpress": "^0.5.1",
-        "wpackagist-plugin/query-monitor": "^3.6"
+        "wpackagist-plugin/query-monitor": "^3.6",
+        "advanced-custom-fields/advanced-custom-fields-pro": "^5"
     }
 }

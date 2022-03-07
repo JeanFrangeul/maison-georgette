@@ -14,7 +14,7 @@ function georgette_enqueue_script()
     wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.3.1.slim.min.js');
     wp_enqueue_script('slick-js', get_template_directory_uri() . '/assets/slick/slick.min.js', ['jquery']);
     wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/main.js', ['jquery']);
-
+    wp_enqueue_script( 'bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', array( 'jquery' ), null, true );
     if (is_front_page()) {
         wp_enqueue_script('home-js', get_template_directory_uri() . '/assets/js/slider.js', ['jquery', 'slick-js']);
     }

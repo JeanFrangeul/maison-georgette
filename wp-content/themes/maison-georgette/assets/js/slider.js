@@ -1,26 +1,23 @@
 jQuery(document).ready(function ($) {
 
     $('.home-slider').slick({
-        centerMode: true,
-        centerPadding: '100px',
-        slidesToShow: 3,
-        autoplay: true,
+        infinite: false,
+        slidesToShow: 6,
+        slidesToScroll: 6,
+        autoplay: false,
         responsive: [{
                 breakpoint: 768,
                 settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
+                    slidesToShow: 3,
+                    slidesToScroll: 3
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
+
+                    slidesToShow: 1,
+                    slidesToScroll: 1
                 }
             }
         ]

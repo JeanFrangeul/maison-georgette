@@ -2,8 +2,7 @@
 <main>
     <!--TEST GIT-->
     <section class="navigation">
-        <h1 class="site__heading"><?php //post_type_archive_title(); 
-                                    ?>Ce que yous trouverez chez Maison Georgette</h1>
+        <h1 class="site__heading">Ce que yous trouverez chez Maison Georgette></h1>
 
         <nav class="products-nav navbar navbar-light" style="background-color: #e3f2fd;">
             <?php if (is_post_type_archive('produits')) :

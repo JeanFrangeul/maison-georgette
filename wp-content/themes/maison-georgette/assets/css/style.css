@@ -8611,36 +8611,12 @@ h3 {
     border-color: #dee2e6;
   }
 }
-header {
-  width: 100vw;
-  padding: 10px;
-  border-bottom: solid 1px gray;
-}
-header .desktop-display {
-  max-height: 500px;
-}
-header .desktop-display .main-menu {
-  text-align: center;
-  list-style: none;
-}
-header .desktop-display .main-menu a {
-  color: burlywood;
-  font-size: 30px;
-}
-header .desktop-display .main-menu a:hover {
-  color: black;
-}
-header .desktop-display #header-logo {
-  object-fit: contain;
-  width: 100%;
-  max-height: 300px;
-}
-
 body {
   /*.connected {
       transform: translateX(100vw);
       animation: hello linear 3s;
   }*/
+  background-color: #CE987E;
 }
 @keyframes hello {
   0% {
@@ -8650,20 +8626,24 @@ body {
     transform: translate(100vw, 0);
   }
 }
-body section {
-  padding: 0 100px;
+body main {
+  margin-left: 100px;
+  margin-right: 100px;
 }
-body .top .right .titre {
-  margin-bottom: 50px;
-  text-align: center;
+body main section .title {
+  font-size: 2.5rem;
+  align-items: center;
 }
-body .top .right table .jours {
-  font-weight: bold;
+body main section.top #title {
+  font-size: 3.5rem;
 }
-body .top .right table .heures {
-  font-style: italic;
+body main section.top h4 {
+  font-size: 1.5rem;
 }
-body .home-slider .item {
+body main section.top video {
+  object-fit: fill;
+}
+body main section.categories .home-slider .item {
   max-height: 100%;
   margin: 0 10px;
 }
