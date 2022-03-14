@@ -1,0 +1,21 @@
+footer {
+    background-color: gray;
+    margin-top: 30px;
+    padding: 5px 0;
+    
+    .menu { //ul
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+
+        .menu-item {
+            list-style: none;
+            text-decoration: none;
+
+            a {
+                color: #000;
+            }
+        }
+        
+    }
+}

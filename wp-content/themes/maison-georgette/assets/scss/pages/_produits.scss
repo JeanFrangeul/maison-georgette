@@ -28,13 +28,13 @@
 
     .produit__title {
         color: black;
-        font-size: 1rem;
+        font-size: 1em;
     }
 
     .produit {
         overflow: hidden;
         text-align: center;
-
+ 
         /*1 produit*/
         img {
             object-fit: cover;

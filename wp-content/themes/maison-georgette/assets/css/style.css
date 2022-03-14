@@ -8614,9 +8614,50 @@ h3 {
 html {
   scroll-behavior: smooth;
 }
-
-header {
-  height: 200px;
+html h1, html h2, html h3, html h4 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+html h1 {
+  margin-top: 10px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 2rem;
+}
+@media (min-width: 992px) {
+  html h1 {
+    margin-top: 20px;
+    font-size: 5em;
+  }
+}
+html h2 {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+@media (min-width: 992px) {
+  html h2 {
+    font-size: 3.5em;
+  }
+}
+html h3 {
+  margin-top: 15px;
+  text-align: start;
+}
+@media (min-width: 992px) {
+  html h3 {
+    font-size: 2.5em;
+  }
+}
+html h4 {
+  font-size: 1.5rem;
+}
+@media (min-width: 720px) {
+  header {
+    height: 200px;
+  }
 }
 header #header-logo {
   height: 200px;
@@ -8708,7 +8749,7 @@ header #navigation-desktop {
   background-color: gray;
   padding-top: 20px;
   height: 100%;
-  padding: 10px 100px;
+  padding: 10px 20px;
 }
 header #navigation-desktop a {
   text-align: center;
@@ -8721,12 +8762,18 @@ header #navigation-desktop #header-display {
   display: flex;
   justify-content: space-between;
   height: 100%;
-  margin: 0 100px;
+  margin: 0 10px;
+}
+@media (min-width: 992px) {
+  header #navigation-desktop #header-display {
+    margin: 0 100px;
+  }
 }
 header #navigation-desktop #header-display #logo {
   max-height: 100%;
   border-radius: 50%;
   overflow: hidden;
+  min-width: 180px;
 }
 header #navigation-desktop #header-display #logo img {
   max-height: 100%;
@@ -8739,10 +8786,13 @@ header #navigation-desktop #header-display #menu-desktop, header #navigation-des
   align-items: center;
   padding: 0;
 }
+header #navigation-desktop #header-display #menu-desktop a, header #navigation-desktop #header-display #social a {
+  text-decoration: none;
+}
 header #navigation-desktop #header-display #menu-desktop a li, header #navigation-desktop #header-display #social a li {
   color: black;
   list-style: none;
-  font-size: 1.8rem;
+  font-size: 1.8em;
 }
 header #navigation-desktop #header-display #menu-desktop a {
   margin: 0 20px;
@@ -8766,6 +8816,24 @@ header #navigation-desktop #header-display #social a li svg {
   }
 }
 
+footer {
+  background-color: gray;
+  margin-top: 30px;
+  padding: 5px 0;
+}
+footer .menu {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+footer .menu .menu-item {
+  list-style: none;
+  text-decoration: none;
+}
+footer .menu .menu-item a {
+  color: #000;
+}
+
 body {
   /*.connected {
       transform: translateX(100vw);
@@ -8782,63 +8850,71 @@ body {
   }
 }
 body main {
-  margin-top: 50px;
-  margin-left: 100px;
-  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
 }
-body main section .title {
-  font-size: 5rem;
-  text-align: center;
-  margin-top: 40px;
+@media (min-width: 992px) {
+  body main {
+    padding-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
 }
-body main section.top #title {
-  font-size: 7rem;
-}
-body main section.top h4 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+body main section {
+  max-width: 1400px;
 }
 body main section.top video {
   object-fit: fill;
+  max-height: 600px;
+  max-width: 1135px;
 }
 body main section.categories .categorie {
-  padding: 30px 0;
+  padding-bottom: 30px;
 }
-body main section.categories .categorie .cat-title {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-body main section.categories .categorie .home-slider .item {
+body main section.categories .categorie .slider .item {
   max-height: 100%;
   margin: 0 10px;
-}
-body main section.about {
-  margin-top: 50px;
-  margin-bottom: 60px;
 }
 body main section.about h2 {
   margin-bottom: 35px;
 }
 body main section.about p {
-  font-size: 1.3rem;
+  padding: 0 15px;
+  font-size: 1.3em;
   text-align: justify;
 }
-body main section.map h2 {
-  margin-bottom: 35px;
+body main section.trouver .map {
+  height: 40vw;
+  max-height: 500px;
+  max-width: 600px;
 }
-body main section.map iframe {
+body main section.trouver iframe {
+  height: 100%;
+  width: 100%;
   box-shadow: 1px -1px 11px 0px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 1px -1px 11px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 1px -1px 11px 0px rgba(0, 0, 0, 0.5);
 }
-body main section.map .contact {
-  padding: 40px 30px;
+body main section.trouver .contact a, body main section.trouver .contact p, body main section.trouver .contact h3 {
+  text-align: center;
 }
-body main section.map .contact .social a {
+@media (min-width: 992px) {
+  body main section.trouver .contact {
+    padding-left: 20px;
+  }
+}
+body main section.trouver .contact .social {
+  display: flex;
+  justify-content: space-around;
+}
+body main section.trouver .contact .social a li {
   color: black;
+  list-style-type: none;
   text-decoration: none;
 }
-body main section.map .contact .social a svg {
+body main section.trouver .contact .social a svg {
   transform: scale(2.5);
 }
 
@@ -8861,7 +8937,7 @@ body.archive .navigation .products-nav li a:hover {
 }
 body.archive .site__produits .produit__title {
   color: black;
-  font-size: 1rem;
+  font-size: 1em;
 }
 body.archive .site__produits .produit {
   overflow: hidden;

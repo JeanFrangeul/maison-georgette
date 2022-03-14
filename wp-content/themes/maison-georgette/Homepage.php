@@ -6,9 +6,9 @@ get_header(); ?>
 
 
 <main>
-	<section class="top d-flex col-12">
+	<section class="top d-flex col-12 p-0">
 		<?php $top = get_field('top-video'); ?>
-		<div class="d-flex flex-column col-12 align-items-center">
+		<div class="d-flex flex-column col-12 align-items-center p-0">
 			<h1 id="title">
 				<?= $top['titre']; ?>
 			</h1>
@@ -17,44 +17,47 @@ get_header(); ?>
 				<?= $top['sous-titre']; ?>
 			</h4>
 
-			<video autoplay muted class="col-8">
+			<video autoplay muted class="col-lg-8">
 				<source src="<?= $top['video']['url'] ;?>" type="<?= $top['video']['mime_type'];?>">
 			</video>
 		</div>
 	</section>
 
 
-	<section id="notre-selection" class="categories">
+	<section id="notre-selection" class="categories col-12 col-md-11">
 		<h2 class="title">Notre Selection</h2>
 		<?php $homeCategorie = get_field('categories');?>
-		
-		<?php foreach ($homeCategorie as $categorie) { ?>
+		<?php $nomClassChiffre = 1; ?>
+		<?php foreach ($homeCategorie as $categorie) { ?>	
 			<div class="categorie">
 				<h3 class="cat-title offset-1"><?= $categorie['categorie-nom']; ?></h3>
 
-				<div class="home-slider">
+				<div class="home-slider-<?= $nomClassChiffre;?> slider">
 					<?php foreach ($categorie['carrousel'] as $image ) {
 						?>
 						<img class="item" src="<?= $image['image']['url']; ?>" alt="image de <?= $image['image']['name']; ?>">
 					<?php } ?>
 				</div>
 			</div>
+			<?php $nomClassChiffre++; ?>
 		<?php } ?>
 	</section>
 
 
-	<section id="a-propos" class="about offset-2 col-8">
+	<section id="a-propos" class="about">
 		<?php $about = get_field('a_propos'); ?>
 		<h2 class="title"><?=$about['titre'];?></h2>
 		<p class="about"><?=$about['texte'];?></p>
 	</section>
 	
 
-	<section id="nous-trouver" class="map">
+	<section id="nous-trouver" class="trouver col-12">
 		<h2 class="title">Où nous trouver ?</h2>
 		
-		<div class="bot d-flex row">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2821.2073931799073!2d-1.201704483910179!3d45.0004101722898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4801ff51b63b14e3%3A0x1e97ed062a8cdc35!2sMaison%20Georgette!5e0!3m2!1sfr!2sfr!4v1620142593655!5m2!1sfr!2sfr" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		<div class="bot d-flex flex-column  flex-lg-row justify-content-center align-items-center">
+			<div class="map col-12 p-0 col-lg-6">
+				<iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2821.2073931799073!2d-1.201704483910179!3d45.0004101722898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4801ff51b63b14e3%3A0x1e97ed062a8cdc35!2sMaison%20Georgette!5e0!3m2!1sfr!2sfr!4v1620142593655!5m2!1sfr!2sfr" width="400" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
 				
 			<div class="contact d-flex flex-column justify-content-around">
 				<h3>Proche de la plage</h3>
@@ -79,8 +82,7 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-	</section>
-
+	</section> 
 </main>
 
 <?php get_footer(); ?>

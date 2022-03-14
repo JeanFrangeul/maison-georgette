@@ -1,5 +1,7 @@
 header {
-    height: 200px;
+    @media (min-width: 720px) {
+        height: 200px;
+    }
 
     #header-logo {
         height: 200px;
@@ -24,6 +26,7 @@ header {
 
                 &:hover {
                     color: tomato;
+                    
                 }
             }
 
@@ -101,14 +104,14 @@ header {
                 font-size: 22px;
             }
         }
-    }
+    } 
 
     #navigation-desktop {
         display: none;
         background-color: gray;
         padding-top: 20px;
         height: 100%;
-        padding: 10px 100px;
+        padding: 10px 20px;
 
         a {
             text-align: center;
@@ -124,12 +127,16 @@ header {
             display: flex;
             justify-content: space-between;
             height: 100%;
-            margin: 0 100px;
+            margin: 0 10px;
+            @media (min-width: 992px) {
+                margin: 0 100px;
+            }
 
             #logo {
                 max-height: 100%;
                 border-radius: 50%;
                 overflow: hidden;
+                min-width: 180px;
 
                 img {
                     max-height: 100%;
@@ -145,12 +152,12 @@ header {
                 padding: 0;
     
                 a {
-                    
+                    text-decoration: none;
     
                     li {
                         color: black;
                         list-style: none;
-                        font-size: 1.8rem;
+                        font-size: 1.8em;
                     }
                 }
             }
@@ -174,7 +181,6 @@ header {
                 }
             }
         }
-
     }
 
 
